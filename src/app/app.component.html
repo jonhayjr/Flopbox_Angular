@@ -1,0 +1,17 @@
+<h4>Flopbox</h4>
+
+<div>
+  <b>My Favorite Actors</b>
+
+  <ul class="list-unstyled" >
+    <my-favorite-actors class="mb-3" *ngFor="let favActor of favoriteActors; index as i; last as l; even as e; odd as o" [favoriteActor]="favActor" [last]="l" [even]="e" [odd]="o" [index]="i"></my-favorite-actors>
+  </ul>
+</div>
+
+<div>
+  <b>All Actors</b>
+  <my-actor-display *ngFor="let actor of actors; last as l; even as e; odd as o" [actor]="actor" 
+  [last]="l" [even]="e" [odd]="o" (ActorClickEvent)="actorSelected($event)"></my-actor-display>
+</div>
+
+
